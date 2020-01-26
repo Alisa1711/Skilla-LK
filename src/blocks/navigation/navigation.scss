@@ -24,9 +24,11 @@
   }
 
   &__logo {
+    position: absolute;
+    left: 24px;
     transition: $base-transition;
 
-    & svg {
+    svg {
       min-width: 72px;
       transition: $slow-transition;
 
@@ -85,9 +87,11 @@
 
   &__menu-label {
     margin-left: 16px;
+    transition: $slow-transition;
   }
 
   &__menu-icon {
+    min-width: 24px;
     opacity: 0.2;
     transition: $base-transition;
   }
