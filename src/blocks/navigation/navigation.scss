@@ -1,0 +1,97 @@
+.navigation {
+  width: 240px;
+  color: map-get($font-colors, negative);
+  background-color: map-get($colors, nav);
+  transition: $slow-transition;
+
+  &__header {
+    box-sizing: border-box;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 72px;
+    box-shadow: map-get($shadows, down-dark);
+  }
+
+  &__open {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 72px;
+    height: 72px;
+    transition: $slow-transition;
+  }
+
+  &__logo {
+    transition: $base-transition;
+
+    & svg {
+      min-width: 72px;
+      transition: $slow-transition;
+
+      & path {
+        transition: $slow-transition;
+      }
+    }
+  }
+
+  &__menu {
+    @include list-reset;
+    @include headline-4;
+  }
+
+  &__menu-item {
+    padding: 24px;
+    display: flex;
+    color: map-get($font-colors, secondary-negative);
+    text-decoration: none;
+    transition: $base-transition;
+    white-space: nowrap;
+
+    &:hover {
+      color: map-get($font-colors, negative);
+
+      .navigation__menu-icon {
+        opacity: 1;
+      }
+    }
+
+    &--active {
+      color: map-get($font-colors, negative);
+      background-color: map-get($colors, hover);
+
+      .navigation__menu-icon {
+        opacity: 1;
+      }
+    }
+
+    &--notification {
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 24px;
+        width: 6px;
+        height: 6px;
+        background-color: map-get($colors, accent);
+        border-radius: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  &__menu-label {
+    margin-left: 16px;
+  }
+
+  &__menu-icon {
+    opacity: 0.2;
+    transition: $base-transition;
+  }
+}
+
+@import "mods/collapsed";
+@import "mods/expanded";

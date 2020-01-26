@@ -8,6 +8,9 @@ env:
   commonjs: true
   jquery: true
 
+globals:
+  mediaQuery: readonly
+
 rules:
   no-invalid-this: 'off'
   guard-for-in: 'off'

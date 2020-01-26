@@ -1,0 +1,29 @@
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+
+  & svg {
+    margin-bottom: 4px;
+  }
+
+  &__slogan {
+    @include headline-6;
+
+    box-sizing: border-box;
+    margin-left: 16px;
+    padding: 4px 12px;
+    display: inline-block;
+    letter-spacing: 0.05em;
+    color: map-get($font-colors, negative);
+    background-color: map-get($colors, accent-2);
+    border-radius: 2px;
+    white-space: nowrap;
+  }
+
+  &--negative {
+    svg path {
+      fill: map-get($colors, logo-negative);
+    }
+  }
+}

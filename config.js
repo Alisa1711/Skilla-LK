@@ -19,10 +19,10 @@ let config = {
     // 'src/scss/print.scss',
   ],
   'addJsBefore': [
-    // 'somePackage/dist/somePackage.js', // для 'node_modules/somePackage/dist/somePackage.js',
+    `src/js/global.js`
   ],
-  'addJsAfter': [
-    `./script.js`,
+  'notJs': [
+    `!src/js/jquery-3.4.0.min.js`
   ],
   'addAssets': {
     'src/fonts/demo-empty-open-sans.woff2': `fonts/`,

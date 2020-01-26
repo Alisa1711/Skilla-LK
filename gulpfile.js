@@ -280,16 +280,16 @@ function compileSass() {
 exports.compileSass = compileSass;
 
 function buildJs() {
-  return src(`src/blocks/**/*.js`)
-        .pipe(sourcemaps.init())
-        .pipe(concat(`script.js`))
-        .pipe(insert.wrap(`$(function() {\n\n`, `\n\n});`))
-        .pipe(babel({
-          presets: [`@babel/env`]
-        }))
-        .pipe(sourcemaps.write(`.`))
-        .pipe(dest(`${dir.build}/js`))
-        .pipe(browserSync.stream());
+  return src([`src/js/global.js`, `src/blocks/**/*.js`])
+    .pipe(sourcemaps.init())
+    .pipe(concat(`script.js`))
+    .pipe(insert.wrap(`$(function() {\n\n`, `\n\n});`))
+    .pipe(babel({
+      presets: [`@babel/env`]
+    }))
+    .pipe(sourcemaps.write(`.`))
+    .pipe(dest(`${dir.build}js`))
+    .pipe(browserSync.stream());
 }
 exports.buildJs = buildJs;
 

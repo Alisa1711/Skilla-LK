@@ -1,0 +1,37 @@
+mixin navigation(text, mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' navigation--' + modsList[i].trim();
+      }
+    }
+
+  -
+    var mainMenu = [
+      {name: 'Сообщество', notification: true, active: true},
+      {name: 'Бизнес-план', notification: false, active: false},
+      {name: 'Вебинары', notification: false, active: false},
+    ]
+
+  .navigation(class=allMods)&attributes(attributes)
+    header.navigation__header
+      +logo('negative').navigation__logo
+      a.navigation__open(href='#')
+        +icon('open-menu').navigation__open-svg
+    ul.navigation__menu
+      each item in mainMenu
+        li
+          a.navigation__menu-item(
+            href='#'
+            class=item.notification ? 'navigation__menu-item--notification' : ''
+            class=item.active ? 'navigation__menu-item--active' : ''
+            )
+            +icon('face', 'c_white').navigation__menu-icon
+            span.navigation__menu-label= item.name

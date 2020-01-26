@@ -20,14 +20,15 @@ html(lang='ru' class='page')
 
     block head
       link(rel='stylesheet', href='css/style.css')
+      link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap&subset=cyrillic')
 
   body
-    block header
-      +header('header')
+    block navigation
+      +navigation
     .main
+      block header
+        +header('header')
       block content
-    block footer
-      +footer('footer')
     block page-bottom
       .svg-sprite
         include ../blocks/sprite-svg/img/sprite.svg

@@ -1,6 +1,29 @@
 // Fonts
 
-// $font-family
+$font-family: "Roboto";
+
+$colors: (
+  logo: #002856,
+  logo-negative: #f1d900,
+  accent: #ffd500,
+  accent-2: #7e6ee6,
+  nav: #122945,
+  hover: rgba(0, 0, 0, 0.12),
+);
+
+$font-colors: (
+  base: #002856,
+  negative: rgba(255, 255, 255, 1),
+  secondary-negative: rgba(255, 255, 255, 0.6),
+);
+
+$shadows: (
+  down: 0 2px 5px rgba(4, 15, 30, 0.24),
+  down-dark: 0 2px 5px rgba(0, 0, 0, 0.45),
+);
+
+$base-transition: all 0.2s ease-in-out;
+$slow-transition: all 0.4s ease-in-out;
 
 
 // Breakpoints. Все стили для модильного по умолчанию. Дальше определяются стили для планшета, затем для десктопа. Если нужно переопределить стиль для декстопа, который такой же, как на мобильном, то переопределяем. Без экономии на спичках.

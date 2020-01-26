@@ -3,11 +3,13 @@
 
   body {
     display: flex;
-    flex-direction: column;
     height: 100%;
+    font-family: $font-family;
+    color: map-get($font-colors, base);
   }
 
   .main {
     flex-grow: 1;
+    background-color: #ffffff;
   }
 }
