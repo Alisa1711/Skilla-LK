@@ -1,0 +1,31 @@
+@mixin expanded {
+  min-width: map-get($widths, nav);
+  width: map-get($widths, nav);
+  transition: $slow-transition;
+
+  .navigation {
+    &__open {
+      display: none;
+    }
+
+    &__logo {
+      left: 24px;
+
+      svg path {
+        fill: map-get($colors, logo-negative);
+      }
+    }
+
+    &__menu-item--notification {
+      &::after {
+        top: 50%;
+        right: 24px;
+        transform: translateY(-50%);
+      }
+    }
+
+    &__menu-label {
+      display: block;
+    }
+  }
+}
