@@ -13,29 +13,36 @@ $colors: (
 
 $font-colors: (
   base: #002856,
+  secondary:rgba(0, 40, 86, 0.54),
   negative: rgba(255, 255, 255, 1),
   secondary-negative: rgba(255, 255, 255, 0.6),
 );
 
 $shadows: (
+  left: 0 0 5px rgba(4, 15, 30, 0.24),
+  up: 0 -1px 3px rgba(0, 0, 0, 0.12),
   down: 0 2px 5px rgba(4, 15, 30, 0.24),
   down-dark: 0 2px 5px rgba(0, 0, 0, 0.45),
 );
 
 $base-transition: all 0.2s ease-in-out;
-$slow-transition: all 0.4s ease-in-out;
+$slow-transition: all 0.2s ease-in-out;
 
 
 // Breakpoints. Все стили для модильного по умолчанию. Дальше определяются стили для планшета, затем для десктопа. Если нужно переопределить стиль для декстопа, который такой же, как на мобильном, то переопределяем. Без экономии на спичках.
 
 $breakpoints: (
   medium: 768px,
-  large: 1600px
+  large: 1440px,
+  xlarge: 1600px
 );
 
 $widths: (
   nav-collapsed: 72px,
-  nav: 240px
+  nav: 240px,
+  sidebar-collapsed: 56px,
+  sidebar: 480px,
+  sidebar-xlarge: 520px
 );
 
 

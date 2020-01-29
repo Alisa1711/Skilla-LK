@@ -10,6 +10,13 @@
 
   .main {
     flex-grow: 1;
+    display: flex;
+    flex-direction: column;
     background-color: #ffffff;
+
+    &__content {
+      flex-grow: 1;
+      display: flex;
+    }
   }
 }

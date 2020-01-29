@@ -1,3 +1,3 @@
 const mediaQuery = {
-  large: `(min-width: 1600px)`
+  large: `(min-width: 1440px)`
 };
