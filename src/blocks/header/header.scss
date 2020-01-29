@@ -3,7 +3,7 @@
   padding-top: 20px;
   padding-bottom: 28px;
   padding-right: 48px;
-  padding-left: 48px;
+  padding-left: 244px;
   height: 72px;
   box-shadow: map-get($shadows, down);
 
@@ -14,11 +14,11 @@
     white-space: nowrap;
   }
 
-  &--nav-collapsed {
-    padding-left: 244px;
-  }
-
   &--nav-expanded {
     padding-left: 72px;
+  }
+
+  @include respond-to(large) {
+    padding-left: 48px;
   }
 }
