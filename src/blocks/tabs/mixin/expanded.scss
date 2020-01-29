@@ -1,0 +1,25 @@
+@mixin expanded {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: map-get($shadows, up);
+
+  .tabs__item {
+    flex-grow: 1;
+
+    &:hover {
+      .tabs__label {
+        color: map-get($font-colors, base);
+      }
+    }
+  }
+
+  .tabs__label {
+    @include tab-label;
+    display: block;
+    margin-left: 16px;
+    color: map-get($font-colors, secondary);
+    white-space: nowrap;
+    transition: $base-transition;
+  }
+}

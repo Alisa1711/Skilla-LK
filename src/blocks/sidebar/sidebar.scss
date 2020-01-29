@@ -1,0 +1,19 @@
+@import "mixin/expanded";
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  min-width: map-get($widths, sidebar-collapsed);
+  width: map-get($widths, sidebar-collapsed);
+  height: 100%;
+  box-shadow: map-get($shadows, left);
+  transition: $base-transition;
+
+  &__content {
+    flex-grow: 1;
+  }
+
+  @include respond-to(xlarge) {
+    @include expanded;
+  }
+}

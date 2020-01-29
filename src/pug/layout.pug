@@ -28,7 +28,8 @@ html(lang='ru' class='page')
     .main
       block header
         +header('header')
-      block content
+      .main__content
+        block content
     block page-bottom
       .svg-sprite
         include ../blocks/sprite-svg/img/sprite.svg

@@ -1,0 +1,7 @@
+@mixin expanded {
+  width: map-get($widths, sidebar);
+
+  @include respond-to(xlarge) {
+    width: map-get($widths, sidebar-xlarge);
+  }
+}

@@ -1,0 +1,20 @@
+mixin tabs(tabs, mods)
+
+  //- Принимает:
+  //-   tabs    {object} - label и icon
+  //-   mods    {string} - список модификаторов
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' tabs--' + modsList[i].trim();
+      }
+    }
+
+  ul.tabs(class=allMods)&attributes(attributes)
+    each item in tabs
+      li.tabs__item
+        +icon(item.icon).tabs__icon
+        span.tabs__label= item.label

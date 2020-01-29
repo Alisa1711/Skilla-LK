@@ -42,7 +42,7 @@
   &__logo {
     position: fixed;
     left: 96px;
-    transition: $base-transition;
+    transition: $slow-transition;
     z-index: 3;
 
     svg {
